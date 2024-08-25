@@ -89,7 +89,7 @@ def link_selected_studyset(filepath):
     try:
         os.symlink(filepath, linkpath)
 
-    except OSError, e:
+    except OSError as e:
         if e.errno == errno.EEXIST:
             os.remove(linkpath)
             os.symlink(filepath, linkpath)
