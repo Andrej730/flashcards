@@ -25,7 +25,7 @@ def generate_filename_from_str(string):
     for key, value in swapchars.items():
         string = string.replace(key, value)
 
-    _ = [c for c in string if c.isalnum() or c is ' ' or c in keepchars]
+    _ = [c for c in string if c.isalnum() or c == ' ' or c in keepchars]
     return ''.join(_).rstrip()
 
 
