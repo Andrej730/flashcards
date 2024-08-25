@@ -75,7 +75,7 @@ def prompt_via_editor(filename, init_message=None):
     editor = os.environ.get('EDITOR', 'vim')
     filecontent = ""
 
-    with tempfile.NamedTemporaryFile(prefix=filename, suffix='.tmp') as f:
+    with tempfile.NamedTemporaryFile(prefix=filename, suffix='.tmp', mode='w+') as f:
         # write initial message
         if init_message is not None:
             f.write(init_message)
