@@ -38,8 +38,9 @@ def add(editormode):
         click.echo('Card added to the studyset !')
 
     except IOError:
-        click.echo('There is no studyset currently selected. '
-                   'Select a studyset to add a card.')
+        editor = os.environ.get('EDITOR', 'vim')
+        click.echo(f"There is no studyset currently selected or current editor ('{editor}') is not found.\n"
+                   f"Select a studyset to add a card and make sure that '{editor}' editor is available.")
 
 
 def _ask_for_question(editor_mode=False):
