@@ -162,9 +162,10 @@ $ flashcards study <set> --mode shuffled
 
 When installing with pip, auto completion should work out of the box for __linux__ distributions.
 
-It hasn't been tested on __windows__.
+For __OSX__, you might have to copy or reference the [flashcards-complete.sh](flashcards-complete.sh) script to your `.bash_profile` file. 
 
-For __OSX__, you might have to copy or reference the [flashcards-complete.sh](flashcards-complete.sh) script to your `.bash_profile` file.
+Similarly, on __Windows__ you need to either copy or `source` the [flashcards-complete.sh](flashcards-complete.sh) in your `bash.bashrc` file.
+
 
 ## Storage directory
 
